@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Directorio de Ferreterías y Profesionales</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #64748b;
+      --accent: #f59e0b;
+      --background: #f8fafc;
+      --text: #1e293b;
+      --white: #ffffff;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      background-color: var(--white);
+      box-shadow: var(--shadow);
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      color: var(--primary);
+      font-size: 1.75rem;
+    }
+    .intro-section {
+      max-width: 800px;
+      margin: 2rem auto;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .intro-section h2 {
+      font-size: 1.5rem;
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+    }
+    .intro-section p {
+      color: var(--secondary);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    .stores-grid {
+      max-width: 1200px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+    .store-card {
+      background-color: var(--white);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .store-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    .store-image {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .store-content {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .store-title {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .store-description {
+      color: var(--secondary);
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+    .store-button {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+    .store-button:hover {
+      background-color: var(--primary-dark);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: var(--text);
+      color: var(--white);
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      .intro-section h2 {
+        font-size: 1.3rem;
+      }
+    }
+    /* Estilos para el botón de volver */
+    .back-button-container {
+      text-align: center;
+      margin: 2rem auto;
+      max-width: 1200px;
+      padding: 0 1rem;
+    }
+    .back-button {
+      display: inline-block;
+      background-color: var(--accent);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: var(--shadow);
+    }
+    .back-button:hover {
+      background-color: #e68a00;
+      transform: translateY(-2px);
+    }
+    .back-button {
+        /* Mantener los estilos actuales */
+        margin-top: 1rem; /* Añadir separación */
+    }
+
+    .back-button::before {
+        content: "←"; /* Agregar flecha */
+        margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Directorio de Ferreterías y Profesionales</h1>
+  </header>
+
+  <!-- Botón para volver a Tilisarao Market -->
+  <div class="back-button-container">
+    <a href="https://tilisaraomarket.github.io/Tilisarao-Market/" class="back-button">
+      Volver a Tilisarao Market
+    </a>
+  </div>
+
+  <section class="intro-section">
+    <h2>Soluciones integrales para tus proyectos</h2>
+    <p>
+      Desde ferreterías hasta arquitectos y constructoras: 
+      aquí encontrarás recursos y asesoría especializados para tus obras 
+      y reparaciones de todo tipo.
+    </p>
+  </section>
+
+  <section class="stores-grid">
+    <!-- Tarjeta #1: Ferretería -->
+    <div class="store-card">
+      <img
+        src="https://images.pexels.com/photos/1797428/pexels-photo-1797428.jpeg?auto=compress&cs=tinysrgb&w=800"
+        alt="Ferretería Buena Mano"
+        class="store-image"
+      />
+      <div class="store-content">
+        <h3 class="store-title">Ferretería Buena Mano</h3>
+        <p class="store-description">
+          Amplio catálogo de herramientas para el hogar y la construcción.
+          Ofrece servicio de entrega a domicilio y asesoría técnica.
+        </p>
+        <a href="https://example.com/buena-mano" class="store-button">
+          Visitar Sitio
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta #2: Ferretería -->
+    <div class="store-card">
+      <img
+        src="https://images.pexels.com/photos/3962285/pexels-photo-3962285.jpeg?auto=compress&cs=tinysrgb&w=800"
+        alt="Herramientas Express"
+        class="store-image"
+      />
+      <div class="store-content">
+        <h3 class="store-title">Herramientas Express</h3>
+        <p class="store-description">
+          Especializados en maquinaria industrial y equipos de protección.
+          Descuentos especiales para grandes pedidos.
+        </p>
+        <a href="https://example.com/herramientas-express" class="store-button">
+          Visitar Sitio
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta #3: Arquitecto -->
+    <div class="store-card">
+      <img
+        src="https://images.pexels.com/photos/930000/pexels-photo-930000.jpeg?auto=compress&cs=tinysrgb&w=800"
+        alt="Estudio de Arquitectura PlanoPerfecto"
+        class="store-image"
+      />
+      <div class="store-content">
+        <h3 class="store-title">Estudio PlanoPerfecto</h3>
+        <p class="store-description">
+          Equipo profesional de arquitectos con propuestas de diseño integral.
+          Especialistas en construcciones residenciales y comerciales.
+        </p>
+        <a href="https://example.com/planoperfecto" class="store-button">
+          Visitar Sitio
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta #4: Ferretería -->
+    <div class="store-card">
+      <img
+        src="https://images.pexels.com/photos/5502907/pexels-photo-5502907.jpeg?auto=compress&cs=tinysrgb&w=800"
+        alt="Materiales La Esquina"
+        class="store-image"
+      />
+      <div class="store-content">
+        <h3 class="store-title">Materiales La Esquina</h3>
+        <p class="store-description">
+          Venta de materiales de construcción a precios competitivos.
+          Atención personalizada y asesoramiento en obra.
+        </p>
+        <a href="https://example.com/materiales-esquina" class="store-button">
+          Visitar Sitio
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta #5: Estudio de Ingeniería -->
+    <div class="store-card">
+      <img
+        src="https://images.pexels.com/photos/7794245/pexels-photo-7794245.jpeg?auto=compress&cs=tinysrgb&w=800"
+        alt="Ingeniería Avanzada"
+        class="store-image"
+      />
+      <div class="store-content">
+        <h3 class="store-title">Ingeniería Avanzada</h3>
+        <p class="store-description">
+          Consultora en proyectos de gran envergadura, diseño estructural 
+          y optimización de recursos para obras civiles.
+        </p>
+        <a href="https://example.com/ingenieria-avanzada" class="store-button">
+          Visitar Sitio
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta #6: Ferretería -->
+    <div class="store-card">
+      <img
+        src="https://images.pexels.com/photos/6214468/pexels-photo-6214468.jpeg?auto=compress&cs=tinysrgb&w=800"
+        alt="Ferretería El Tornillo"
+        class="store-image"
+      />
+      <div class="store-content">
+        <h3 class="store-title">Ferretería El Tornillo</h3>
+        <p class="store-description">
+          Experiencia de más de 30 años en carpintería, albañilería 
+          y elementos de seguridad industrial.
+        </p>
+        <a href="https://example.com/el-tornillo" class="store-button">
+          Visitar Sitio
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta #6: Ferretería -->
+    <div class="store-card">
+      <img
+        src="imagen de ferreteria el tornillo.png"
+        alt="Ferretería El Tornillo"
+        class="store-image"
+      />
+      <div class="store-content">
+        <h3 class="store-title">Ferretería El Tornillo</h3>
+        <p class="store-description">
+          Esta web está disponible para la venta o alquiler. Experiencia de más de 30 años en carpintería, albañilería 
+          y elementos de seguridad industrial.
+        </p>
+        <a href="https://tilisaraomarket.github.io/Ferreteria-El-Tornillo/" class="store-button">
+          Visitar Sitio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 - Directorio de Ferreterías y Arquitectura. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+</qodoArtifact>
